@@ -42,7 +42,7 @@ class BookAdapter(private var items: List<Book>) : RecyclerView.Adapter<Recycler
             Glide.with(itemView.context)
                 .applyDefaultRequestOptions(requestOptions)
                 .load(obBook.imageURL)
-                .apply(RequestOptions().override(600, 150))
+                .apply(RequestOptions().fitCenter())
                 .into(mImage)
         }
     }
